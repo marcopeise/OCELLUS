@@ -1,12 +1,14 @@
-# Bibtext Filter
+# Tosil
 
-A simple tool for searching ScienceDirect, Springer, IEEE and ACM API and applying filters on the results. 
+A simple <u>To</u>ol for <u>s</u>earch<u>i</u>ng <u>l</u>iterature.
+
+currently implemented: ScienceDirect, Springer, IEEE and ACM API.
 
 **Usage:** `python3 main.py -af args.json`
 
 **Arguments:**
    - `-af, --argsfile` : Name and path of the argument file (args.json)
- 
+
 ## Features:
 - Filter ScienceDirect, Springer, IEEE and ACM by concepts on certain fields
 - add custom operands for more advanced queries
@@ -18,7 +20,7 @@ Certain arguments must be passed for using this tool. The following is an exampl
 ```json
 {
     "concepts": [
-        ["blockchain", "distributed ledger"], 
+        ["blockchain", "distributed ledger"],
         ["market", "trading"]
     ],
     "fields": [
@@ -67,10 +69,10 @@ The idea is that that one can define 'concepts' and 'fields'. Concepts contain a
 }
 ```
 
-The dict.json file is used for two reasons, first of all it stores the API keys for all used API's, more importantly though, it is used for normalizing the different field names of the different API's. 
+The dict.json file is used for two reasons, first of all it stores the API keys for all used API's, more importantly though, it is used for normalizing the different field names of the different API's.
 
 ### field_synonym's:
-This object is used for nomalizing the names for the same fields, on the different API's. For example, IEEE calls the title "Document Title", while ACM calls it "title" and "booktitle". In order to use all API's without special configuration for each request we use this object. The keys for each field_synonym are the field names used in this tool, while the values are the names used by the API. Currently "abstract", "title", "keyword" are the only fields that can be used safelty without any configuration, because the field_synonyms have been added. 
+This object is used for nomalizing the names for the same fields, on the different API's. For example, IEEE calls the title "Document Title", while ACM calls it "title" and "booktitle". In order to use all API's without special configuration for each request we use this object. The keys for each field_synonym are the field names used in this tool, while the values are the names used by the API. Currently "abstract", "title", "keyword" are the only fields that can be used safelty without any configuration, because the field_synonyms have been added.
 
 ### accepted_field's:
 This object simply contains an array of fields, that is accepted for each API. (A lot more can be added by searching through the API Documentation)
@@ -91,34 +93,34 @@ When this query is created, the program check, if Springer has any field_synonym
 AND
 (Document Title=market OR Author Keywords=market OR Document Title=trading OR Author Keywords=trading)
 ```
-With this query, the program checks for field_synonyms again, finds them, and uses the synonyms for the query. 
+With this query, the program checks for field_synonyms again, finds them, and uses the synonyms for the query.
 
 ## Other configurations
 
 ### 1. passing operands:
-The args.json file has a field called 'operands' which can contain an array of operations that can be added to the search. 
+The args.json file has a field called 'operands' which can contain an array of operations that can be added to the search.
 
 Example:
  ```json
   { "operands": [
         {   
-            "field": "year", 
-            "operator": "<=", 
+            "field": "year",
+            "operator": "<=",
             "value":2017
         },
         {   
-            "field": "abstract", 
-            "operator": "==", 
+            "field": "abstract",
+            "operator": "==",
             "value":"This is a test"
         }
     ]
 }
  ```
- 
- There are two type of operations that can be performed with this argument, string based operations and integer based operations. 
- 
+
+ There are two type of operations that can be performed with this argument, string based operations and integer based operations.
+
  ##### String based operations:
- 
+
  - used by setting the opperator to "=="
  - value must passed as a string
  When passed the script will check if given field has the exact same value as passed in the value field
@@ -131,7 +133,7 @@ Example:
 
 ### 2. Defining file names:
 
-File names for both output files can be defined via the args.json file. 
+File names for both output files can be defined via the args.json file.
 
 ```json
 { "settings": {
@@ -146,8 +148,8 @@ File names for both output files can be defined via the args.json file.
 ```json
 {
     "concepts": [
-        ["blockchain", "smart contract", "distributed ledger", "decentralized"], 
-        ["market", "trading"], 
+        ["blockchain", "smart contract", "distributed ledger", "decentralized"],
+        ["market", "trading"],
         ["electricity", "energy"]],
     "fields": [
         ["title"],
@@ -156,8 +158,8 @@ File names for both output files can be defined via the args.json file.
     ],
     "operands": [
         {   
-            "field": "year", 
-            "operator": "<=", 
+            "field": "year",
+            "operator": "<=",
             "value":"2017"
         }
     ],
@@ -167,24 +169,3 @@ File names for both output files can be defined via the args.json file.
     }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
