@@ -1,0 +1,23 @@
+{
+    "concepts": [
+        ["smart contract", "blockchain"], 
+        ["energy"],
+        ["trading"]
+    ],
+    "fields": [
+        ["title"],
+        ["keyword"],
+        ["abstract"]
+    ],
+    "settings": {
+        "failed_name": "failed_entries.json",
+        "passed_name": "passed_entries.bib",
+        "argument_file": "args.json"
+    },
+    "sources": {
+        "springer": true,
+        "ieee": true,
+        "acm": false,
+        "science_direct": false
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "field_synonyms": {
+        "springer" : {
+            "abstract": ["abstract"],
+            "title": ["title"],
+            "keyword": ["keyword"]
+        },
+        "ieee": {
+            "abstract": ["Abstract"],
+            "title": ["Document Title"],
+            "keyword": ["Author Keywords"]
+        },
+        "acm": {
+            "title": ["title", "booktitle"]
+        },
+        "science_direct": {
+            "abstract": ["abs"],
+            "title": ["Title"],
+            "keyword": ["key"]
+        }
+    },
+    "api_keys": {
+        "springer": "d9f600d5b3bf91e3c3849031072b7582",
+        "ieee": "eyxc5mxv56st2p6vkk44c969",
+        "science_direct": "69340b3564cc5870a7f340f220472da6"
+    },
+    "accepted_fields": {
+        "ieee": ["Abstract","Document Title", "Author Keywords"],
+        "springer": ["doi", "subject", "keyword", "pub", "year", "country", "isbn", "issn", "journalid", "topicalcollection", "date", "issuetype", "issue", "volume", "type", "title", "orgname", "journal", "book", "name", "abstract"],
+        "science_direct": ["Content-Type", "Contenttypetxt", "Title-Abstr-Key", "abs", "Non-Eng-Abst", "Stereo-Chem-Abst", "Authors", "Specific-Author", "Authlastname", "Authfirst", "Affiliation", "Pub-Date", "key", "Specific-Authkey", "Specific-Otherkey", "References", "Title", "Srctitle", "Srctitleplus", "Article-TOC", "Non-Eng-Title", "Speciss-Name", "DOI", "ISSN", "ISBN", "Vol-Issue", "Pages", "Pagefirst", "Pagelast", "Doc-Head", "seriesname", "seriesissnnorm", "seriesvolume", "seriespart", "Load-Date", "Orig-Load-Date"]
+    }   
+}
+
+
+
