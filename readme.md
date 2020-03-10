@@ -1,6 +1,6 @@
-# Tosil
+# OCELLUS
 
-A simple <u>To</u>ol for <u>s</u>earch<u>i</u>ng <u>l</u>iterature.
+An <u>o</u>pen, <u>c</u>ontinuous, v<u>e</u>rsion-control<u>l</u>ed <u>l</u>iterat<u>u</u>re <u>s</u>ervice.
 
 currently implemented: ScienceDirect, Springer, IEEE and ACM API.
 
