@@ -37,7 +37,7 @@ query-string==1.0.2
 queuelib==1.5.0
 request==1.0.2
 requests==2.20.1
-Scrapy==1.5.1
+Scrapy==2.6.2
 service-identity==17.0.0
 six==1.11.0
 Twisted==18.9.0
